@@ -26,3 +26,7 @@ class ScreenManager:
                 return [bounds[0], j]
 
         return -1
+    
+    #OpenCV likes Numpy arrays, and it's faster than PIL
+    def getAsNP(self):
+        return np.array(self.__currentCap)
